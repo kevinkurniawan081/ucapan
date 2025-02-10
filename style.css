@@ -1,0 +1,112 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 3000px;
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  text-align: center;
+  overflow-y: auto; /* Mengaktifkan scrolling ke bawah */
+  background-image: url("./img/img1.jpeg");
+}
+.title {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  background-color: #f27d7d; /* Warna putih transparan */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  background-color: #f27d7d; /* Warna hitam transparan */
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff3d2e;
+}
+
+.heart-animation {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  background-color: #ff6f61;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite ease-in-out;
+}
+
+.heart-animation::before,
+.heart-animation::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+}
+
+.heart-animation::before {
+  top: -75px;
+  left: 0;
+}
+
+.heart-animation::after {
+  top: 0;
+  left: 75px;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+}
+
+/* Video Container Styling */
+.video-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
